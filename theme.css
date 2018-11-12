@@ -2,7 +2,11 @@ body {
 	text-align: center;
 }
 
-.contactMsg {
+.contentContainer {
+	text-align: left;
+}
+
+.formContainer {
 	text-align: left;
 	margin: 3pt;
 	padding: 6pt;
@@ -12,15 +16,20 @@ body {
 	width: 40%;
 }
 
-#contactForm {
+form {
 	margin: 0;
 }
 
-#contactForm > * {
+form > * {
 	margin: 3pt;
+	width: calc(100% * 2 / 3 - 6pt);
 }
 
-#contactForm > textarea {
+form > input[type=submit] {
+	width: inherit;
+}
+
+form > textarea {
 	width: calc(100% - 6pt);
 	resize: vertical;
 }
