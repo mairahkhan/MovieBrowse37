@@ -1,20 +1,53 @@
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="../theme.css">
-	</head>
+		<title>Page Title</title>
+		</head>
 	<body>
-		<h1>Sign up</h1>
-		<div class="formContainer">
-			<form>
-				<input type="text" placeholder="Username">
-				<br>
-				<input type="email" placeholder="Email">
-				<br>
-				<input type="password" placeholder="Password">
-				<br>
-				<input type="submit">
-				<p>lorem ipsum</p>
-			</form>
+		<h1 style="text-align: center">Sign Up</h1>
+		<form action="/action_page.php">
+			First name: <input type="text" name="FirstName"><br>
+			Last name: <input type="text" name="LastName"><br>
+			Email: <input type="text" name="Email"><br>
+			Password: <input type="text" name="Password"><br>
+			Re-enter password: <input type="text" name="Re-enter password"><br>
+		</form>
+		<h2 style="text-align: center">Payment</h2>
+		<form action="/action_page.php">
+			Payment Method: <select>
+			<option value="Mastercard">Mastercard</option>
+			<option value="VISA">VISA</option>
+			<option value="AMEX">AMEX</option>
+			<option value="PayPal">PayPal</option>
+			</select><br>
+			Credit Card Number: <input type="text" name="CreditCardNumber"><br>
+			Security Code: <input type="text" name="SecurityCode"><br>
+			Expiration Date: <input type="text" name="ExpirationDate"><br>
+			<br>
+		</form>
+		<h3 style="text-align: center">Billing Address</h3>
+		<form action="/action_page.php">
+			First name: <input type="text" name="FirstName"><br>
+			Last name: <input type="text" name="LastName"><br>
+			Street: <input type="text" name="Street"><br>
+			City: <input type="text" name="City"><br>
+			Province/State: <select>
+			<option value="AB">AB</option>
+  			<option value="BC">BC</option>
+  			<option value="NB">NB</option>
+  			<option value="NL">NL</option>
+			<option value="NS">NS</option>
+			<option value="NT">NT</option>
+			<option value="NU">NU</option>
+			<option value="ON">ON</option>
+			<option value="PE">PE</option>
+			<option value="QC">QC</option>
+			<option value="SK">SK</option>
+			<option value="YT">YT</option>
+			</select><br>
+			Country: <input type="text" name="Country"value="Canada"><br>
+			Postal Code: <input type="text" name="PostalCode"><br>
+			<input type="submit" value="Submit">
+		</form>
 		</div>
 	</body>
-</html>
+</html> 
