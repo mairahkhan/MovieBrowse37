@@ -1,0 +1,51 @@
+<html>
+<head>
+		<link rel="stylesheet" type="text/css" href="../theme.css">
+	</head>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<div style="background:color:#fff; border:solid 1px #333; float:right; text-align:center; padding:5px;">
+   <i class="fa fa-user"></i><br>
+   User
+</div>
+
+<a href="https://www.xyz.com/">Home</a>
+<a href="url">My List</a>
+<h1 align="center">Advanced Search</h1>
+<form>
+Search by name:<input type="text" name="SearchName"><br><br>
+Genre: <select>
+  <option value="Horror">Horror</option>
+  <option value="Comedy">Comedy</option>
+  <option value="Romance">Romance</option>
+  <option value="Action">Action</option>
+  <option value="Thrillers">Thrillers</option>
+</select><br><br>
+Year: <select>
+  <option value="<1990">1990</option>
+  <option value="1990-2000">1990-2000</option>
+  <option value="2000-2010">2000-2010</option>
+  <option value="2010-now">2010-now</option>
+</select><br><br>
+...or search by year:<input type="text" name="SearchYear"><br><br>
+Language: <select>
+  <option value="English">English</option>
+  <option value="French">French</option>
+  <option value="2000-2010">2000-2010</option>
+  <option value="2010-now">2010-now</option>
+</select><br><br>
+Rating: <select>
+  <option value="1-Poor">1-poor</option>
+  <option value="2-Below average">2-below average</option>
+  <option value="3-Average">3-average</option>
+  <option value="4-Aood">4-good</option>
+  <option value="5-Excellent">5-excellent</option>
+</select><br><br>
+<input type="submit" value="Submit">
+<br>
+</form>
+
+</body>
+</html>
