@@ -1,4 +1,43 @@
 video {
-	width: 87.5%;
+	width: 100%;
 	height: auto;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+#vidOverlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+
+#vidContainer {
+	padding: 0;
+	width: calc(100% * 2 / 5);
+	height: auto;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#playerContainer {
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+#playButton {
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+	position: absolute;
+	bottom: calc(100% * 1/64);
+	left: calc(100% * 1/64 * 3/4);
+}
+
+#playButton:focus {
+	outline: none;
 }
