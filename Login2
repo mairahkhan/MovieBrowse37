@@ -1,0 +1,22 @@
+      <html>
+      <head>
+          <link rel="stylesheet" type="text/css" href="../theme.css">
+        </head>
+        <body>
+        <a href="url">Settings</a>
+        <h1 align="center">Log in</h1>
+        <form>
+        Username:<br>
+        <input type="text" name="username">
+        <br>
+        Password:<br>
+        <input type="text" name="password"> <a href="https://www.xyz.com/">Help?</a>
+        <br><br>
+        <input type="submit" value="Submit"><br><br>
+        Not a user? <a href="https://www.xyz.com/">Sign Up!</a>
+        <br>
+        </form> 
+        <br>
+        <p align="center">Sign up now for only $7.99/month and get the first month free!</p>
+        </body>
+        </html>
