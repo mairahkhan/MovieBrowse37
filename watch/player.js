@@ -14,3 +14,11 @@ document.getElementById("playButton").addEventListener("click",
 		}
 	}
 );
+
+vid.addEventListener("ended",
+	function(e) {
+		var btnIcon = ovl.querySelector("#playButton > img");
+
+		btnIcon.src = "playbutton1.svg";
+	}
+);
