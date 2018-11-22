@@ -1,0 +1,99 @@
+body {
+	margin: 0;
+	background-color: #201729;
+}
+
+video {
+	width: 100%;
+	height: auto;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+#vidOverlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	/*animation: vidControlFadeOut 0.125s forwards;*/
+	opacity: 0;
+	background-image: linear-gradient(transparent, transparent 80%, #0000007F);
+}
+.vidOverlayFadeOut { animation: vidControlFadeOut 0.5s forwards; }
+#vidOverlay:hover {
+	animation: vidControlFadeIn 0.25s forwards;
+}
+
+@keyframes vidControlFadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes vidControlFadeOut {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+#vidContainer {
+	padding: 0;
+	width: calc(100% * 2 / 5);
+	height: auto;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#playerContainer {
+	width: 100%;
+	height: auto;
+	background-color: #130D1A;
+	text-align: center;
+	margin-top: 5%;
+}
+
+#playButton {
+	width: 24pt;
+	height: 24pt;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+	position: absolute;
+	bottom: calc(100% * 1/64);
+	left: calc(100% * 1/64 * 3/4);
+}
+#playButton:focus {
+	outline: none;
+}
+
+#playButton > img {
+	width: inherit;
+	height: inherit;
+}
+
+#progressBar {
+	border-radius: 6pt;
+	width: calc(75% - (100% * 2/64 * 3/4 + 24pt));
+	height: 6pt;
+	background-color: #BFBFBF5F;
+	position: absolute;
+	bottom: calc(100% * 1/64 + 9pt);
+	left: calc(100% * 2/64 * 3/4 + 24pt);
+	overflow: hidden;
+}
+
+#progressLoad {
+	width: 0%;
+	height: 100%;
+	background-color: #FFFFFF5F;
+	position: absolute;
+	pointer-events: none;
+}
+
+#progressFill {
+	width: 0%;
+	height: 100%;
+	background-color: #FFFFFF;
+	position: absolute;
+	pointer-events: none;
+}
