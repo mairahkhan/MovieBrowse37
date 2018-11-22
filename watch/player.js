@@ -45,7 +45,7 @@ document.getElementById("progressBar").addEventListener("mousedown",
 document.addEventListener("mousemove",
 	function(e) {
 		if (progressDrag) {
-			var bar = document.getElementById("progressBar")
+			var bar = document.getElementById("progressBar");
 			var barLeft = bar.getBoundingClientRect().left;
 
 			e.preventDefault();
@@ -74,6 +74,27 @@ vid.addEventListener("ended",
 );
 
 function progressUpdate() {
+	var ranges = vid.buffered;
+	var load = document.getElementById("progressLoad");
+	var bar = document.getElementById("progressBar");
+
 	document.getElementById("progressFill").style.width = (100.0 * vid.currentTime / vid.duration).toString() + "%";
+
+	for (i = 0; i < ranges.length; i++) {
+		if (
+			ranges.start(i) <= vid.currentTime &&
+			ranges.end(i) >= vid.currentTime
+		) {
+			load.style.left =
+				(100.0 * bar.clientWidth * ranges.start(i) / vid.duration) +
+				"%";
+			load.style.width =
+				(
+					100.0 * bar.clientWidth *
+					(ranges.end(i) - ranges.start(i)) / vid.duration
+				) + "%";
+			console.log(ranges.length);
+		}
+	}
 }
 window.setInterval(progressUpdate, 100);
